@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FILL FORM </title>
+</head>
+<body>
+    <style>
+        body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #eef2f3, #333);
+  color: black;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+        form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #222;
+  margin-top: 0.4rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form textarea {
+  resize: vertical;
+}
+section {
+  background: #333;
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 900px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+    </style>
+    <section id="fill form">
+        <h2><u>PLEASE FILL FORM TO START TUTORIALS</u></h2>
+        <p>Please fill up this form for you start learning coding with 
+          Me as your tutor. and If you are an advanced you can learn more 
+          through me
+      </p>
+        <form onsubmit="sendToWhatsApp(); return false;">
+          <label>Your Name:</label>
+          <input type="text" id="name" required>
+        
+          <label>Your Email:</label>
+          <input type="email" id="email" required>
+        
+          <label>Your Level:</label>
+          <select id="level" required>
+            <option value="">--Select--</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+      </select>
+          <label>What do you want to learn?</label>
+          <textarea id="learn" rows="3" required></textarea>
+        
+          <label>Message:</label>
+          <textarea id="message" rows="3" required></textarea>
+        
+          <input type="submit" value="Send to WhatsApp">
+        </form>
+        </section>
+        <footer style="text-align: center; margin-top: 40px;">
+          <a href="tb drastox.html" style="padding: 10px 20px; background-color: #0078D7; color: white; border-radius: 8px; text-decoration: none;">🏠 Go Back Home tessy-tech production</a>
+        </footer>
+      <script src="tb drastox.js"></script>
+</body>
+</html>

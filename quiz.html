@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ</title>
+</head>
+<style>
+    body {
+      background: linear-gradient(to right, #eef2f3, blue);
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .quiz-container {
+      max-width: 700px;
+      margin: 50px auto;
+      background: #0078D7;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .question {
+      margin: 20px 0;
+    }
+
+    .question p {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .options label {
+      display: block;
+      margin: 5px 0;
+      background: #e3f2fd;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .options label:hover {
+      background: #bbdefb;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #0078D7;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #2e7d32;
+      text-align: center;
+    }
+
+    .feedback {
+      margin-top: 20px;
+      background: #fff8e1;
+      padding: 15px;
+      border-left: 5px solid #ffc107;
+      border-radius: 8px;
+      color: #333;
+    }
+</style>
+<body>
+  <footer style="text-align: center; margin-top: 40px;">
+    <a href="tb drastox.html" style="padding: 10px 20px; background-color: #0078D7; color: white; border-radius: 8px; text-decoration: none;">🏠 Go Back Home tessy-tech production</a>
+  </footer>
+    <form id="quizForm">
+        <div class="question">
+          <p>1. What does HTML stand for?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="a"> Hyperlinks and Text Markup Language</label>
+            <label><input type="radio" name="q1" value="b"> Home Tool Markup Language</label>
+            <label><input type="radio" name="q1" value="c"> HyperText Markup Language</label>
+          </div>
+        </div>
+  
+        <div class="question">
+          <p>2. Which of the following adds interactivity to a web page?</p>
+          <div class="options">
+            <label><input type="radio" name="q2" value="a"> CSS</label>
+            <label><input type="radio" name="q2" value="b"> JavaScript</label>
+            <label><input type="radio" name="q2" value="c"> HTML</label>
+          </div>
+        </div>
+  
+        <div class="question">
+          <p>3. What will this JavaScript code output?<br><code>console.log(2 + '2');</code></p>
+          <div class="options">
+            <label><input type="radio" name="q3" value="a"> 4</label>
+            <label><input type="radio" name="q3" value="b"> "22"</label>
+            <label><input type="radio" name="q3" value="c"> NaN</label>
+          </div>
+        </div>
+  
+        <div class="question">
+          <p>4. What tag is used to make text bold in HTML?</p>
+          <div class="options">
+            <label><input type="radio" name="q4" value="a">&lt;b&gt;</label>
+            <label><input type="radio" name="q4" value="b">&lt;strong&gt;</label>
+            <label><input type="radio" name="q4" value="c">Both</label>
+          </div>
+        </div>
+  
+        <div class="question">
+          <p>5. What does CSS stand for?</p>
+          <div class="options">
+            <label><input type="radio" name="q5" value="a"> Cascading Style Sheets</label>
+            <label><input type="radio" name="q5" value="b"> Computer Style Sheets</label>
+            <label><input type="radio" name="q5" value="c"> Creative Style Syntax</label>
+          </div>
+        </div>
+  
+        <div class="question">
+          <p>6. Which symbol is used to select a class in CSS?</p>
+          <div class="options">
+            <label><input type="radio" name="q6" value="a"> . (dot)</label>
+            <label><input type="radio" name="q6" value="b"> # (hash)</label>
+            <label><input type="radio" name="q6" value="c"> @ (at)</label>
+          </div>
+        </div>
+  
+        <div class="question">
+          <p>7. How do you write a comment in JavaScript?</p>
+          <div class="options">
+            <label><input type="radio" name="q7" value="a"> /* comment */</label>
+            <label><input type="radio" name="q7" value="b"> // comment</label>
+            <label><input type="radio" name="q7" value="c"> &lt;!-- comment --&gt;</label>
+          </div>
+        </div>
+  
+        <div class="question">
+          <p>8. What does <code>querySelector()</code> do?</p>
+          <div class="options">
+            <label><input type="radio" name="q8" value="a"> Finds all elements with a tag</label>
+            <label><input type="radio" name="q8" value="b"> Selects the first element that matches a CSS selector</label>
+            <label><input type="radio" name="q8" value="c"> Replaces HTML content</label>
+          </div>
+        </div>
+  
+        <div class="question">
+          <p>9. Which HTML tag is used to insert a line break?</p>
+          <div class="options">
+            <label><input type="radio" name="q9" value="a">&lt;break&gt;</label>
+            <label><input type="radio" name="q9" value="b">&lt;br&gt;</label>
+            <label><input type="radio" name="q9" value="c">&lt;lb&gt;</label>
+          </div>
+        </div>
+  
+        <div class="question">
+          <p>10. What is the correct syntax to change text in JavaScript?</p>
+          <div class="options">
+            <label><input type="radio" name="q10" value="a"> document.innerText = "Hello"</label>
+            <label><input type="radio" name="q10" value="b"> document.getElementById("demo").innerHTML = "Hello"</label>
+            <label><input type="radio" name="q10" value="c"> inner.text = "Hello"</label>
+          </div>
+        </div>
+  
+        <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+        <button type="button" onclick="resetQuiz()" style="margin-left: 10px; background: #e53935;">
+            🔁 Try Again
+          </button>          
+      </form>
+  
+      <div class="result" id="result"></div>
+      <div class="feedback" id="feedback"></div>
+    </div>  
+</body>
+<script src="tb drastox.js"></script>
+<footer style="text-align: center; margin-top: 40px;">
+    <a href="tb drastox.html" style="padding: 10px 20px; background-color: #0078D7; color: white; border-radius: 8px; text-decoration: none;">🏠 Go Back Home tessy-tech production</a>
+  </footer>
+
+</html>

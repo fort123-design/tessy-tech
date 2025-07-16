@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tessy-tech | Coding Tutorial</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <style>
+        /* Reset & Base */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'arial, san serif';
+  background: linear-gradient(to right, black, white);
+  color: black;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  
+}
+header {
+  background: linear-gradient(to right, white, #333);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('tessy-tech-bg.jpg');
+  background-size: center;
+  background-position: center;
+  color: black;
+  text-align: center;
+  padding: 1px;
+}
+header h1 {
+  font-size: 1.9rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+nav ul li {
+  margin: 0.5rem 1rem;
+}
+
+nav ul li a {
+  color: #0078D7;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00d4ff;
+}
+
+/* Sections */
+section {
+  background: linear-gradient(to right, #333, #333);
+  color: black;
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 30px 25px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: black;
+  margin-bottom: 1rem;
+  border-left: 5px solid #0077cc;
+  padding-left: 10px;
+}
+
+/* Button */
+button,
+input[type="submit"] {
+  padding: 0.7rem 1.4rem;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #005fa3;
+}
+
+/* Footer */
+footer {
+  text-align: left;
+  background-color:  #005fa3;
+  color: black;
+  padding: 2.2rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  border-top: 3px solid blue;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 0.3rem 0;
+  }
+}
+.header {
+  display: flex;
+  justify-content: flex-start; /* left */
+  align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  height: 10px;
+}
+.header2 {
+  display: flex;
+  justify-content: flex-start; /* right */
+  align-items: right;
+  padding: 9px;
+}
+
+.logo {
+  height: 10px;
+}
+    /* ChatGPT Styles */
+    #chat-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #005fa3;
+      color: black;
+      padding: 12px 20px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 16px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+
+    #chat-container {
+      position: fixed;
+      bottom: 100px;
+      right: 100px;
+      width: 1200px;
+      background: linear-gradient(to right, #eef2f3, blue);
+      border: 3px solid black;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+      z-index: 999;
+    }
+
+    #chat-header {
+      background: #0053a4;
+      color: black;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    #chat-messages {
+      padding: 50px;
+      height: 400px;
+      overflow-y: auto;
+      font-size: 20px;
+    }
+
+    #chat-input-area {
+      display: flex;
+      border-top: 1px solid #eee;
+    }
+
+    #chat-input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      outline: none;
+    }
+
+    #chat-input-area button {
+      padding: 0 16px;
+      background: #0053a4;
+      color:black;
+      border: none;
+      cursor: pointer;
+    }
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .menu button {
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #0078D7;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .section {
+      display: none;
+      margin-top: 15px;
+      padding: 15px;
+      background: #f0f0f0;
+      border-left: 5px solid #0078D7;
+      animation: slideDown 0.3s ease;
+    }
+
+    @keyframes slideDown {
+      from {opacity: 0; transform: translateY(-10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .section.active {
+      display: block;
+    }
+    </style>
+  <header>
+
+    </div>
+    
+    <div class="hero">
+    <h1>🌏<u>TESSY-TECH CODING WORLD</u></h1>
+    <p><strong><b>👋WELCOME TO TESSY-TECH</b></strong></p>
+ <p><strong>I build, code, and teach. Let’s grow together! And empower coding student to
+    know and understand language in coding
+        <h2><strong><u>TESSY-TECH MOTIVES</u> </strong></h2>
+    <p class="tagline"><strong>🏷️Where Innovation Meets Simplicity!</strong>
+    <p class="tagline"><strong>🏷️Smart Solutions, Real Impact.</strong>
+    <p class="tagline"><strong>🏷️Tech Made Simple. Powered by Tessy Tech.</strong>
+      <p class="tagline"><strong>🏷️Tessy-tech. Empowering your digital world</strong>
+    </strong></p>
+      <nav>
+      <ul>
+        <li><a href="intro.html"><b>INTRODUCTION</b></a></li>
+        <li><a href="#search"><b>SEARCH</b></a></li>
+        <li><a href="aboutme.html"><b>ABOUT THE FOUNDER</b></a></li>
+        <li><a href="project.html">MY PROJECTS</a></li>
+        <li><a href="learnfromme.html">START TUTORIAL</a></li>
+        <li><a href="#TESSY-TECHAIASS">TESSY-TECH AI</a></li>
+        <li><a href="quiz.html">START QUIZ</a></li>
+      </div>
+      </ul>
+    </nav>
+  </header>
+  <br>
+  <br>
+
+  <div style="background:  linear-gradient(to right, black, #0053a4); padding: 20px; text-align: center;">
+    <section style="background-color: #eaf4ff; padding: 5px; border-radius: 0px; max-width: 800px; margin: 1px auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; box-shadow: 0 2px 9px rgba(0, 0, 0, 0.1);">
+    <p><strong><b>📦<U>TESSY-TECH PRODUCTION</U></b></strong></p>
+      <h1 style="color: #005b99; text-align: center; text-decoration: underline; margin-bottom: 5px;">
+        Welcome to Tessy-Tech Coding World 🌐
+      </h1>
+      <p style="font-size: 18px; color: black; line-height: 1.6;">
+        <strong>Tessy-Tech Coding World</strong> is a dynamic and inspiring platform designed for curious minds, tech lovers, and passionate coders. We provide a friendly space where you can explore everything from <em>basic HTML and CSS</em> to advanced <em>JavaScript, game development, AI, and web hosting</em>.
+      </p>
+      <p style="font-size: 18px; color: black; line-height: 1.6;">
+        Whether you're building your first website, designing your own fighting game, or adding smart AI assistants to your projects, Tessy-Tech is here to guide you every step of the way. We believe in learning by doing — and creating with style. 🚀
+      </p>
+      <p style="font-size: 18px; color: black; line-height: 1.6;">
+        Join a world where your imagination comes alive in code. 💻 Get tutorials, tools, templates, and the inspiration you need to level up your tech skills and become the developer you dream to be.
+      </p>
+  <p><b> Welcome to the world of Coding where you learn research about languages in coding<br>
+ Enjoy this website to learn and exercise your coding ability by answering quiz etc.<br>
+ <p> Tessy-Tech A web for Educating and directing student in the technological World.<br><br> </p>
+ <marquee><p>WELCOME TO TESSY-TECH ENJOY THE CODING WORLD AND EXCERCISE YOUR CODING ABILITY</p></marquee>
+  </b></p>
+    </button>
+  </div>
+  </section>
+  <br>
+  <br>
+  <br>
+  
+  <section id="TESSY-TECHAIASS">
+    <section style="max-width: 900px; margin: 50px auto; padding: 30px; background: #005b99; border-radius: 10px; font-family: 'Segoe UI', sans-serif; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+      <h2 style="color: #0078D7; font-size: 2em; margin-bottom: 20px;">
+    <h2>🤖TESSY-TECH AI ASS</h2>
+    <p>
+      Ask  for any thing related to java,html and css
+      on the AI Assistance.  it main focus on the html java and CSS
+      this are the only things allowed to function on the ai it is special 
+      for coding you can easily fillup the form to get more class about Coding deeply.<br>
+      on this AI you only require/ask  for html, css, javascript, create a website, navbar,form , image, darkmode,button.<br><br>
+      <strong>reload this page to get blank page on the ai assistant</strong>
+      </p>
+     
+  </section>
+  <section id="chat-icon">
+<div id="chat-icon" onclick="toggleChat()"><strong><b>💬 TESSY-TECH AI ASSITANT</b></strong></div>
+
+<div id="chat-container">
+  <div id="chat-header">Ask Me Anything</div>
+  <div id="chat-messages"></div>
+  <div id="chat-input-area">
+    <input type="text" id="chat-input" placeholder="Type your question..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+</section>
+  <section id="search">
+    <section style="max-width: 900px; margin: 50px auto; padding: 30px; background: #005fa3; border-radius: 10px; font-family: 'Segoe UI', sans-serif; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+      <h2 style="color: #0078D7; font-size: 2em; margin-bottom: 20px;">
+    <h2>🔍 Search</h2>
+    <p>
+        You Can also search on with Google on this my Website
+        Thank You.<br><br>
+        <strong>Search Now</strong>
+    </p>
+  <form
+  action="https://www.google.com/search" method="GET">
+   <input type="text"
+   id="searchInput" name="q"
+   placeholder ="Search........" />
+   <br>
+   <button type="submit">Search</button>
+   </form>
+   </section> 
+   
+   <br>
+   <br>
+   <br>
+   <br>
+</body>
+<footer>
+  <div style="background:  blue; padding: 60px; text-align: center;">
+  <p><marquee>Learn more on Java , python and html on this websites you will get better knowledge on coding with me as your tutor</marquee></p>
+  <p>&copy; 2025 Tessy's-Tech Coding World  </p>
+</footer>
+<script src="tb drastox.js"></script>
+<a href="fill form.html"></a>
+</html>
+<br>
+<Br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
